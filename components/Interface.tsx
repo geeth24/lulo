@@ -83,45 +83,50 @@ function Interface() {
                 />
                 <Box
                     display="flex"
-                    //align items to the left
-                    alignItems="left"
                     flexDirection="column"
                     justifyContent="center"
-                    //align items to the left
-                    maxWidth={{ base: "xs", md: "5xl" }}
+                    //align items left
+                    alignItems="flex-start"
+                    width="100%"
                 >
-                    <VStack spacing={3} align="flex-start">
-                        <HStack spacing={3} textAlign="left">
-                            <Image
-                                src="/interfaces/icons/1.svg"
-                                alt="interface1"
-                                width="20.94px"
-                                height="21.51px"
-                            />
+                    <Box maxWidth="xs" alignItems="left">
+                        <VStack spacing={3} align="flex-start">
+                            <HStack spacing={3} textAlign="right">
+                                <Text
+                                    fontSize="xl"
+                                    fontWeight="bold"
+                                    bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
+                                    bgClip="text"
+                                >
+                                    AUTOMATED VAULTS
+                                </Text>
+                                <Image
+                                    src="/interfaces/icons/1.svg"
+                                    alt="interface1"
+                                    width="20.94px"
+                                    height="21.51px"
+                                />
+                            </HStack>
                             <Text
-                                fontSize="xl"
+                                fontSize="3xl"
+                                color="white"
+                                lineHeight="base"
                                 fontWeight="bold"
-                                bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
-                                bgClip="text"
+                                textAlign="left"
                             >
-                                AUTOMATED VAULTS
+                                Easily deposit funds to earn interest
                             </Text>
-                        </HStack>
-                        <Text
-                            fontSize="3xl"
-                            color="white"
-                            lineHeight="base"
-                            fontWeight="bold"
-                            textAlign="left"
-                        >
-                            Easily deposit funds to earn interest
-                        </Text>
-                        <Text fontSize="lg" color="#AFAEB8" textAlign="left">
-                            Access capital-efficient lending strategies from
-                            vaults that automate strategies on Lulo’s order
-                            books.
-                        </Text>
-                    </VStack>
+                            <Text
+                                fontSize="lg"
+                                color="#AFAEB8"
+                                textAlign="left"
+                            >
+                                Access capital-efficient lending strategies from
+                                vaults that automate strategies on Lulo’s order
+                                books.
+                            </Text>
+                        </VStack>
+                    </Box>
                 </Box>
             </SimpleGrid>
             <SimpleGrid
@@ -154,39 +159,45 @@ function Interface() {
                     justifyContent="center"
                     //align items left
                     alignItems="flex-end"
-                    maxWidth={{ base: "xs", md: "5xl" }}
+                    width="100%"
                 >
-                    <VStack spacing={3} align="flex-end">
-                        <HStack spacing={3} textAlign="right">
+                    <Box maxWidth="xs" alignItems="left">
+                        <VStack spacing={3} align="flex-end">
+                            <HStack spacing={3} textAlign="right">
+                                <Text
+                                    fontSize="xl"
+                                    fontWeight="bold"
+                                    bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
+                                    bgClip="text"
+                                >
+                                    FUNDING BOOK
+                                </Text>
+                                <Image
+                                    src="/interfaces/icons/2.svg"
+                                    alt="interface1"
+                                    width="20.94px"
+                                    height="21.51px"
+                                />
+                            </HStack>
                             <Text
-                                fontSize="xl"
+                                fontSize="3xl"
+                                color="white"
+                                lineHeight="base"
                                 fontWeight="bold"
-                                bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
-                                bgClip="text"
+                                textAlign="right"
                             >
-                                FUNDING BOOK
+                                Borrow and lend at desired rates
                             </Text>
-                            <Image
-                                src="/interfaces/icons/2.svg"
-                                alt="interface1"
-                                width="20.94px"
-                                height="21.51px"
-                            />
-                        </HStack>
-                        <Text
-                            fontSize="3xl"
-                            color="white"
-                            lineHeight="base"
-                            fontWeight="bold"
-                            textAlign="right"
-                        >
-                            Borrow and lend at desired rates
-                        </Text>
-                        <Text fontSize="lg" color="#AFAEB8" textAlign="right">
-                            Originate new loans in a precise and efficient
-                            manner.
-                        </Text>
-                    </VStack>
+                            <Text
+                                fontSize="lg"
+                                color="#AFAEB8"
+                                textAlign="right"
+                            >
+                                Originate new loans in a precise and efficient
+                                manner.
+                            </Text>
+                        </VStack>
+                    </Box>
                 </Box>
             </SimpleGrid>
             <SimpleGrid
@@ -215,44 +226,49 @@ function Interface() {
                 />
                 <Box
                     display="flex"
-                    //align items to the left
-                    alignItems="left"
                     flexDirection="column"
                     justifyContent="center"
-                    //align items to the left
-                    maxWidth={{ base: "xs", md: "5xl" }}
+                    //align items left
+                    alignItems="flex-start"
+                    width="100%"
                 >
-                    <VStack spacing={3} align="flex-start">
-                        <HStack spacing={3} textAlign="left">
-                            <Image
-                                src="/interfaces/icons/3.svg"
-                                alt="interface1"
-                                width="20.94px"
-                                height="21.51px"
-                            />
+                    <Box maxWidth="xs" alignItems="left">
+                        <VStack spacing={3} align="flex-start">
+                            <HStack spacing={3} textAlign="right">
+                                <Image
+                                    src="/interfaces/icons/3.svg"
+                                    alt="interface1"
+                                    width="20.94px"
+                                    height="21.51px"
+                                />
+                                <Text
+                                    fontSize="xl"
+                                    fontWeight="bold"
+                                    bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
+                                    bgClip="text"
+                                >
+                                    RISK MANAGEMENT
+                                </Text>
+                            </HStack>
                             <Text
-                                fontSize="xl"
+                                fontSize="3xl"
+                                color="white"
+                                lineHeight="base"
                                 fontWeight="bold"
-                                bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
-                                bgClip="text"
+                                textAlign="left"
                             >
-                                RISK MANAGEMENT
+                                Closely monitor your counterparty risk
                             </Text>
-                        </HStack>
-                        <Text
-                            fontSize="3xl"
-                            color="white"
-                            lineHeight="base"
-                            fontWeight="bold"
-                            textAlign="left"
-                        >
-                            Closely monitor your counterparty risk
-                        </Text>
-                        <Text fontSize="lg" color="#AFAEB8" textAlign="left">
-                            Filter who you match with. On Lulo, every loan has a
-                            known counterparty.
-                        </Text>
-                    </VStack>
+                            <Text
+                                fontSize="lg"
+                                color="#AFAEB8"
+                                textAlign="left"
+                            >
+                                Filter who you match with. On Lulo, every loan
+                                has a known counterparty.
+                            </Text>
+                        </VStack>
+                    </Box>
                 </Box>
             </SimpleGrid>
         </>

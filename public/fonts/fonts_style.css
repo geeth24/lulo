@@ -6,6 +6,11 @@
 
 @font-face {
     font-family: "Helvetica Now Display";
+    src: url("../fonts/HelveticaNowDisplay-Medium.ttf") format("truetype");
+    font-weight: medium;
+}
+@font-face {
+    font-family: "Helvetica Now Display";
     src: url("../fonts/HelveticaNowDisplay-Bold.ttf") format("truetype");
     font-weight: bold;
 }

@@ -95,8 +95,16 @@ function Footer() {
             bg="transparent"
             w="full"
             overflowY="hidden"
-            borderTopWidth={2}
+            sx={{
+                borderImage:
+                    "linear-gradient(90deg, rgba(1, 218, 124, 0) 2.69%, rgba(175, 174, 184, 0) 2.7%, rgba(175, 174, 184, 0.21) 50.12%, rgba(175, 174, 184, 0) 96.58%)",
+                borderImageSlice: 1,
+                borderTopWidth: "1.5px",
+                borderTopStyle: "solid",
+                borderTopColor: "transparent",
+            }}
             marginTop={-90}
+            
         >
             <chakra.div h="4.5rem" mx="auto" maxW="7xl" px={{ base: 2, sm: 4 }}>
                 <Flex

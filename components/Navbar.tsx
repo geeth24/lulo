@@ -1,5 +1,4 @@
 import {
-    useColorMode,
     useColorModeValue,
     useDisclosure,
     Icon,
@@ -19,14 +18,10 @@ import React from "react"
 
 import { AiOutlineMenu } from "react-icons/ai"
 import { IoIosArrowDown } from "react-icons/io"
-import { FaDiscord, FaMoon, FaSun, FaTimes, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaTimes, FaTwitter } from "react-icons/fa"
 import { motion } from "framer-motion"
 
 function Navbar() {
-    const { toggleColorMode: toggleMode } = useColorMode()
-    const text = useColorModeValue("dark", "light")
-    const SwitchIcon = useColorModeValue(FaMoon, FaSun)
-    const bg = useColorModeValue("white", "gray.800")
     const ref = React.useRef(null)
     const [y, setY] = React.useState(0)
     //@ts-ignore
@@ -38,148 +33,137 @@ function Navbar() {
     const cl = useColorModeValue("gray.800", "white")
     const mobileNav = useDisclosure()
 
-    const Section = (props: {
-        icon: string | undefined
-        title:
-            | string
-            | number
-            | boolean
-            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-            | React.ReactFragment
-            | React.ReactPortal
-            | null
-            | undefined
-        children:
-            | string
-            | number
-            | boolean
-            | React.ReactElement<any, string | React.JSXElementConstructor<any>>
-            | React.ReactFragment
-            | React.ReactPortal
-            | null
-            | undefined
-    }) => {
-        const ic = useColorModeValue("brand.600", "brand.50")
-        const hbg = useColorModeValue("gray.50", "brand.400")
-        const tcl = useColorModeValue("gray.900", "gray.50")
-        const dcl = useColorModeValue("gray.500", "gray.50")
-        return (
-            <Link
-                m={-3}
-                p={3}
-                display="flex"
-                alignItems="start"
-                rounded="lg"
-                _hover={{
-                    bg: hbg,
-                }}
-            >
-                <Icon
-                    flexShrink={0}
-                    h={6}
-                    w={6}
-                    color={ic}
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    aria-hidden="true"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                >
-                    <path d={props.icon} />
-                </Icon>
-                <Box ml={4}>
-                    <chakra.p fontSize="sm" fontWeight="700" color={tcl}>
-                        {props.title}
-                    </chakra.p>
-                    <chakra.p mt={1} fontSize="sm" color={dcl}>
-                        {props.children}
-                    </chakra.p>
-                </Box>
-            </Link>
-        )
-    }
+    //check if scrollY is greater than 0
+    const isScrolled = y > 0
 
     const MobileNavContent = (
         <VStack
-            pos="absolute"
+            position="absolute"
             top={20}
+            mt={-2}
             left={0}
             right={0}
             display={mobileNav.isOpen ? "flex" : "none"}
             flexDirection="column"
             pb={4}
-            bg="#00000079"
-            //add blur
-            backdropFilter="blur(10px)"
+            bg="linear-gradient(359.86deg, rgba(0, 5, 5, 0.8) 75.56%, rgba(0, 5, 5, 0) 131.78%)"
+            backdropFilter="blur(19.5px)"
+            sx={{
+                borderImage:
+                    "linear-gradient(90deg, rgba(1, 218, 124, 0) 2.69%, rgba(175, 174, 184, 0) 2.7%, rgba(175, 174, 184, 0.21) 50.12%, rgba(175, 174, 184, 0) 96.58%)",
+                borderImageSlice: 1,
+                borderTopWidth: "1.5px",
+                borderTopStyle: "solid",
+                borderTopColor: "transparent",
+            }}
             rounded="sm"
             shadow="sm"
-            zIndex="10"
+            zIndex="999"
             //animation
             as={motion.div}
             initial={{ opacity: 0, y: -20 }}
             whileInView={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-            transition="0.5s linear"
+            transition="0.3s linear"
         >
             <Box
                 w="full"
                 border="1.5px "
-                borderBottomColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     Protocol
                 </Text>
             </Box>
             <Box
                 w="full"
                 border="1.5px "
-                borderBottomColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     Governance
                 </Text>
             </Box>
             <Box
                 w="full"
-                border="1.5px "
-                borderBottomColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     Docs
                 </Text>
             </Box>
             <Box
                 w="full"
                 border="1.5px "
-                borderBottomColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     About
                 </Text>
             </Box>
             <Box
                 w="full"
                 border="1.5px "
-                borderBottomColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     Twitter
                 </Text>
             </Box>
             <Box
                 w="full"
                 border="1.5px"
-                borderColor="linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)"
+                sx={{
+                    borderImage:
+                        "linear-gradient(90deg, rgba(175, 174, 184, 0.21) 2.69%, rgba(175, 174, 184, 0) 96.58%)",
+                    borderImageSlice: 1,
+                    borderBottomWidth: "1.5px",
+                    borderBottomStyle: "solid",
+                    borderBottomColor: "transparent",
+                }}
                 p={3}
             >
-                <Text fontSize="xl" fontWeight="bold" color="white">
+                <Text fontSize="xl" fontWeight="medium" color="white" ml={5}>
                     Discord
                 </Text>
             </Box>
@@ -189,15 +173,23 @@ function Navbar() {
         <chakra.header
             ref={ref}
             shadow={y > height ? "sm" : undefined}
-            transition="box-shadow 0.2s"
-            bg="transparent"
-            borderTop="6px solid"
-            borderTopColor="brand.400"
+            bg={isScrolled ? "#000000" : "transparent"}
+            //add transition
+            transition="0.1s linear"
             w="full"
-            overflowY="hidden"
-            borderBottomWidth={2}
+            sx={{
+                borderImage:
+                    "linear-gradient(90deg, rgba(1, 218, 124, 0) 2.69%, rgba(175, 174, 184, 0) 2.7%, rgba(175, 174, 184, 0.21) 50.12%, rgba(175, 174, 184, 0) 96.58%)",
+                borderImageSlice: 1,
+                borderBottomWidth: "1.5px",
+                borderBottomStyle: "solid",
+                borderBottomColor: "transparent",
+            }}
             color="gray.800"
             marginBottom={-90}
+            position="sticky"
+            top={0}
+            zIndex="10"
         >
             <chakra.div h="4.5rem" mx="auto" maxW="7xl" px={{ base: 2, sm: 4 }}>
                 <Flex
