@@ -70,6 +70,7 @@ function Interface() {
                 mx="auto"
                 display="flex"
                 flexDirection={{ base: "column-reverse", md: "row-reverse" }}
+                p={5}
             >
                 <Image
                     src="/interfaces/1.png"
@@ -142,6 +143,7 @@ function Interface() {
                 mx="auto"
                 display="flex"
                 flexDirection={{ base: "column-reverse", md: "row" }}
+                p={5}
             >
                 <Image
                     src="/interfaces/2.png"
@@ -213,6 +215,7 @@ function Interface() {
                 mx="auto"
                 display="flex"
                 flexDirection={{ base: "column-reverse", md: "row-reverse" }}
+                p={5}
             >
                 <Image
                     src="/interfaces/3.png"
