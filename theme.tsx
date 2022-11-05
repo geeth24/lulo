@@ -5,14 +5,11 @@ const config = {
     useSystemColorMode: false,
 }
 const colors = {
-  
-  //make gray darker
-  gray: {
-    "800": "#000000",
-  },
-
-
-};
+    //make gray darker
+    gray: {
+        "800": "#000505",
+    },
+}
 
 // 3. extend the theme
-export const theme = extendTheme({ config, colors });
+export const theme = extendTheme({ config, colors })

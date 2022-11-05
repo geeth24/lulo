@@ -173,7 +173,7 @@ function Navbar() {
         <chakra.header
             ref={ref}
             shadow={y > height ? "sm" : undefined}
-            bg={isScrolled ? "#000000" : "transparent"}
+            bg={isScrolled ? "#000505" : "transparent"}
             //add transition
             transition="0.1s linear"
             w="full"
