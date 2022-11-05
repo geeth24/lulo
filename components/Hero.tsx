@@ -34,13 +34,14 @@ function Hero() {
                 flexDirection="column"
                 justifyContent="center"
                 alignItems="center"
-                maxW="xl"
+                maxW="2xl"
+                mt={20}
             >
                 <chakra.h1
                     mb={3}
                     fontSize={{
                         base: "5xl",
-                        md: "6xl",
+                        md: "7xl",
                     }}
                     fontWeight="bold"
                     color="white"

@@ -196,34 +196,40 @@ function Navbar() {
                     w="full"
                     h="full"
                     px="6"
-                    align="center"
+                    // align="center"
                     justify="space-between"
                 >
-                    <Flex align="flex-start">
+                    <Flex align="center">
                         <Link href="/">
                             <HStack>
                                 <Image
                                     src="/lulo.svg"
                                     alt="logo"
-                                    width="150px"
-                                    height="150px"
+                                    width="135px"
+                                    height="135px"
                                 />
                             </HStack>
                         </Link>
                     </Flex>
-                    <Flex align="center" maxWidth="xs">
+
+                    <Box
+                        display="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                        ml={20}
+                    >
                         <HStack
-                            spacing="1"
+                            spacing="2"
                             display={{
                                 base: "none",
-                                md: "flex",
+                                lg: "flex",
                             }}
                         >
                             <Button
                                 color="white"
-                                display="inline-flex"
                                 alignItems="center"
-                                fontSize={{ base: "xs", md: "sm" }}
+                                fontSize={{ base: "sm", md: "md" }}
+                                fontWeight="medium"
                                 _hover={{
                                     color: cl,
                                 }}
@@ -236,9 +242,9 @@ function Navbar() {
                             </Button>
                             <Button
                                 color="white"
-                                display="inline-flex"
                                 alignItems="center"
-                                fontSize={{ base: "xs", md: "sm" }}
+                                fontSize={{ base: "sm", md: "md" }}
+                                fontWeight="medium"
                                 _hover={{
                                     color: cl,
                                 }}
@@ -251,9 +257,9 @@ function Navbar() {
                             </Button>
                             <Button
                                 color="white"
-                                display="inline-flex"
                                 alignItems="center"
-                                fontSize={{ base: "xs", md: "sm" }}
+                                fontSize={{ base: "sm", md: "md" }}
+                                fontWeight="medium"
                                 _hover={{
                                     color: cl,
                                 }}
@@ -266,9 +272,9 @@ function Navbar() {
                             </Button>
                             <Button
                                 color="white"
-                                display="inline-flex"
                                 alignItems="center"
-                                fontSize={{ base: "xs", md: "sm" }}
+                                fontSize={{ base: "sm", md: "md" }}
+                                fontWeight="medium"
                                 _hover={{
                                     color: cl,
                                 }}
@@ -282,9 +288,9 @@ function Navbar() {
 
                             <Button
                                 color="white"
-                                display="inline-flex"
                                 alignItems="center"
-                                fontSize={{ base: "xs", md: "sm" }}
+                                fontSize={{ base: "sm", md: "md" }}
+                                fontWeight="medium"
                                 _hover={{
                                     color: cl,
                                 }}
@@ -297,14 +303,15 @@ function Navbar() {
                                 More
                             </Button>
                         </HStack>
-                    </Flex>
-                    <Flex align="flex-end" color="white">
+                    </Box>
+
+                    <HStack spacing="2" color="white">
                         <HStack spacing="5">
                             <HStack
                                 spacing="5"
                                 display={{
                                     base: "none",
-                                    md: "flex",
+                                    lg: "flex",
                                 }}
                             >
                                 <Icon as={FaDiscord} />
@@ -313,41 +320,41 @@ function Navbar() {
                             <Button
                                 variant="solid"
                                 size="sm"
+                                width="150px"
                                 bg="white"
                                 color="black"
                             >
                                 Launching Soon...
                             </Button>
-                            <IconButton
-                                display={{
-                                    base: "flex",
-                                    md: "none",
-                                }}
-                                aria-label="Open menu"
-                                fontSize="20px"
-                                size="sm"
-                                color="gray.800"
-                                _dark={{
-                                    color: "inherit",
-                                }}
-                                variant="ghost"
-                                icon={
-                                    mobileNav.isOpen ? (
-                                        <FaTimes
-                                            transform="rotate(90deg)"
-                                            style={{
-                                                transition:
-                                                    "all 0.3s ease-in-out",
-                                            }}
-                                        />
-                                    ) : (
-                                        <AiOutlineMenu />
-                                    )
-                                }
-                                onClick={() => mobileNav.onToggle()}
-                            />
                         </HStack>
-                    </Flex>
+                        <IconButton
+                            display={{
+                                base: "flex",
+                                lg: "none",
+                            }}
+                            aria-label="Open menu"
+                            fontSize="20px"
+                            size="sm"
+                            color="gray.800"
+                            _dark={{
+                                color: "inherit",
+                            }}
+                            variant="ghost"
+                            icon={
+                                mobileNav.isOpen ? (
+                                    <FaTimes
+                                        transform="rotate(90deg)"
+                                        style={{
+                                            transition: "all 0.3s ease-in-out",
+                                        }}
+                                    />
+                                ) : (
+                                    <AiOutlineMenu />
+                                )
+                            }
+                            onClick={() => mobileNav.onToggle()}
+                        />
+                    </HStack>
                 </Flex>
                 {MobileNavContent}
             </chakra.div>

@@ -79,7 +79,9 @@ function Interface() {
                     mb={10}
                     w={{
                         base: "md",
-                        md: "lg",
+                        md: "sm",
+                        lg: "md",
+                        xl: "lg",
                     }}
                 />
                 <Box
@@ -93,20 +95,20 @@ function Interface() {
                     <Box maxWidth="xs" alignItems="left">
                         <VStack spacing={3} align="flex-start">
                             <HStack spacing={3} textAlign="right">
-                                <Text
-                                    fontSize="xl"
-                                    fontWeight="bold"
-                                    bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
-                                    bgClip="text"
-                                >
-                                    AUTOMATED VAULTS
-                                </Text>
                                 <Image
                                     src="/interfaces/icons/1.svg"
                                     alt="interface1"
                                     width="20.94px"
                                     height="21.51px"
                                 />
+                                <Text
+                                    fontSize={{base: "lg", md: "lg", lg: "xl"}}
+                                    fontWeight="bold"
+                                    bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
+                                    bgClip="text"
+                                >
+                                    AUTOMATED VAULTS
+                                </Text>
                             </HStack>
                             <Text
                                 fontSize="3xl"
@@ -150,9 +152,11 @@ function Interface() {
                     alt="backed by"
                     mt={5}
                     mb={10}
-                    w={{
+                     w={{
                         base: "md",
-                        md: "lg",
+                        md: "sm",
+                        lg: "md",
+                        xl: "lg",
                     }}
                 />
                 <Box
@@ -167,7 +171,7 @@ function Interface() {
                         <VStack spacing={3} align="flex-end">
                             <HStack spacing={3} textAlign="right">
                                 <Text
-                                    fontSize="xl"
+                                    fontSize={{base: "lg", md: "lg", lg: "xl"}}
                                     fontWeight="bold"
                                     bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
                                     bgClip="text"
@@ -222,9 +226,11 @@ function Interface() {
                     alt="backed by"
                     mt={5}
                     mb={10}
-                    w={{
+                     w={{
                         base: "md",
-                        md: "lg",
+                        md: "sm",
+                        lg: "md",
+                        xl: "lg",
                     }}
                 />
                 <Box
@@ -245,7 +251,7 @@ function Interface() {
                                     height="21.51px"
                                 />
                                 <Text
-                                    fontSize="xl"
+                                    fontSize={{base: "lg", md: "lg", lg: "xl"}}
                                     fontWeight="bold"
                                     bg="linear-gradient(180deg, #00F08B 0%, #00D176 100%)"
                                     bgClip="text"
